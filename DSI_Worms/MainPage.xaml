@@ -6,58 +6,115 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    RequestedTheme="Light">
 
     <Page.Resources>
         <Style TargetType="Button">
-            <Setter Property="Background" Value="DeepSkyBlue"/>
+            <Setter Property="Background" Value="#5BC0DE"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="CornerRadius" Value="2"/>
-            <Setter Property="FontFamily" Value="ABeeZee"/>
+            <Setter Property="FontFamily" Value="/Fonts/#ABeeZee-Regular"/>
             <Setter Property="FontSize" Value="20"/>
+        </Style>
+
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="/Assets/#ABeeZee-Regular"/>
         </Style>
     </Page.Resources>
 
     <Grid>
         <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/stripes.jpg" Opacity="0.5"/>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/Stripes.jpg" Opacity="0.4"/>
         </Grid.Background>
-        
+
         <StackPanel Orientation="Vertical" 
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center">
-            <Image  Margin="60"
-                    Source="Assets/worms.jpg" 
-                    Width="480"/>
-            
+
+            <Grid>
+                <Border CornerRadius="260">
+                    <Rectangle Width="500"
+                           Height="290"
+                           Fill="White"/>
+                </Border>
+
+                <Image Margin="60"
+                   Source="Assets/worms.jpg" 
+                   Width="480"/>
+            </Grid>
+
             <Button Content="JUGAR" 
                     HorizontalAlignment="Center" 
                     Margin="20" 
                     Width="300" 
-                    Height="40"/>
+                    Height="40"
+                    Click="On_Play">
+                <Button.Resources>
+                    <ResourceDictionary>
+                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#71D7F5"/>
+                        <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#71D7F5"/>
+                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#71D7F5"/>
+                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#71D7F5"/>
+                    </ResourceDictionary>
+                </Button.Resources>
+            </Button>
 
             <TextBlock Margin="0, 60, 0, 0"
-                       Text="76%" 
+                       Text="100%" 
                        HorizontalAlignment="Center" 
-                       FontSize="24" 
-                       FontFamily="Verdana"
-                       Foreground="Gray"/>
+                       FontSize="20" 
+                       Foreground="#7A7A7A"/>
 
             <ProgressBar BorderBrush="Black" 
                          BorderThickness="1" 
                          Margin="10" 
                          Background="White" 
-                         Foreground="DeepSkyBlue" 
-                         Value="76"
+                         Foreground="#91E4FB" 
+                         Value="100"
                          Height="10"
                          Width="380"
                          CornerRadius="2"/>
 
-            <Rectangle Margin="10" Width="650" Height="60">
-                <Rectangle.Fill>
-                    <SolidColorBrush Color="LightSkyBlue"/>
-                </Rectangle.Fill>
-            </Rectangle>
+            <Grid>
+                <Border CornerRadius="40">
+                    <Rectangle Margin="10" 
+                           Width="650" 
+                           Height="70">
+                        <Rectangle.Fill>
+                            <SolidColorBrush Color="#D9EDF7"/>
+                        </Rectangle.Fill>
+                    </Rectangle>
+                </Border>
+                
+                <TextBlock Text="Puedes personalizar tus tropas a través del menú 'Personalización' en la pantalla de inicio" 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Center"
+                           Foreground="#1565C0"/>
+            </Grid>
         </StackPanel>
+
+        <Image Source="Assets/Exit.png" 
+               Width="80" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Bottom"
+               Margin="20"
+               Tapped="On_Exit"/>
+
+        <Image Source="Assets/Settings.png" 
+               Width="80" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Top"
+               Margin="20"
+               Tapped="On_Settings"/>
+
+        <Image Source="Assets/Customization.png" 
+               Width="80" 
+               HorizontalAlignment="Right" 
+               VerticalAlignment="Top"
+               Margin="20"
+               Tapped="On_Customization"/>
     </Grid>
 </Page>

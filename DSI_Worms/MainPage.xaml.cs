@@ -26,5 +26,29 @@ namespace DSI_Worms
         {
             this.InitializeComponent();
         }
+
+        // Sale de la aplicación
+        private void On_Exit(object sender, TappedRoutedEventArgs e)
+        {
+            Application.Current.Exit();
+        }
+
+        // Navega al menú de configuración
+        private void On_Settings(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Settings));
+        }
+
+        // Navega al menú de personalización
+        private void On_Customization(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Customization));
+        }
+
+        // Navega a la pantalla de juego
+        private void On_Play(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(Game));
+        }
     }
 }

@@ -1,0 +1,43 @@
+﻿<Page
+    x:Class="DSI_Worms.Customization"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DSI_Worms"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="/Assets/#ABeeZee-Regular"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="Assets/Stripes.jpg" Opacity="0.4"/>
+        </Grid.Background>
+
+        <Image Source="Assets/Back.png" 
+               Width="80" 
+               HorizontalAlignment="Left" 
+               VerticalAlignment="Top"
+               Margin="20"
+               Tapped="On_Back"/>
+
+        <StackPanel Orientation="Vertical">
+            <TextBlock Margin="0, 80, 0, 0"
+                       Text="PERSONALIZACIÓN"
+                       HorizontalAlignment="Center"
+                       FontSize="40"
+                       FontWeight="SemiBold"
+                       Foreground="#00A4D3"/>
+
+            <Rectangle Width="700" 
+                       Height="3"
+                       Margin="0, 10, 0, 0"
+                       Fill="#00A4D3"/>
+        </StackPanel>
+    </Grid>
+</Page>
