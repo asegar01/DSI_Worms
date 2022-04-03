@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    RequestedTheme="Light"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.Resources>
@@ -77,18 +78,16 @@
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center"
                             Margin="0, 70, 0, 0">
-                    
-                    <ToggleButton x:Name="General" Content="General" IsChecked="True"/>
-                    <ToggleButton x:Name="Video" Content="Vídeo" IsChecked="False"/>
-                    <ToggleButton x:Name="Audio" Content="Audio" IsChecked="False"/>
-                    
+                    <ToggleButton x:Name="General" Content="General" Checked="General_Checked"/>
+                    <ToggleButton x:Name="Video" Content="Vídeo" Checked="Video_Checked"/>
+                    <ToggleButton x:Name="Audio" Content="Audio" Checked="Audio_Checked"/>
                 </StackPanel>
 
                 <Grid x:Name="Configuration">
+                    
                     <Rectangle Fill="White" Height="450" Width="840" StrokeThickness="1" Stroke="Gray" Grid.ColumnSpan="2"/>
 
-                    <StackPanel x:Name="GeneralSettings" 
-                                Visibility="Visible"
+                    <StackPanel x:Name="GeneralSettings"
                                 Orientation="Vertical"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center">
@@ -102,7 +101,7 @@
                             <TextBlock Text="Subtítulos"/>
                             <ToggleSwitch OffContent="" OnContent="" Margin="215, 0, 0, 0" Width="45"/>
                         </StackPanel>
-                        
+
                         <StackPanel Orientation="Horizontal" Margin="50, 0, 0, 0">
                             <TextBlock Text="Idioma"/>
                             <ComboBox Margin="230, 0, 0, 0" SelectedItem="Assets/SpainFlag.png">
@@ -114,26 +113,22 @@
                                 </ComboBoxItem>
                             </ComboBox>
                         </StackPanel>
-                        
                     </StackPanel>
 
                     <StackPanel x:Name="VideoSettings"
-                                Visibility="Visible"
                                 Orientation="Vertical"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center">
-                        
-                        
+                        <Button x:Name="p" Content="bideo"/>
                     </StackPanel>
 
                     <StackPanel x:Name="AudioSettings"
-                                Visibility="Visible"
                                 Orientation="Vertical"
                                 HorizontalAlignment="Center"
                                 VerticalAlignment="Center">
-
-                        
+                        <Button x:Name="a" Content="uadio"/>
                     </StackPanel>
+                    
                 </Grid>
             </StackPanel>
         </Grid>
