@@ -141,9 +141,11 @@
   <ItemGroup>
     <Content Include="Assets\Back.png" />
     <Content Include="Assets\Customization.png" />
+    <Content Include="Assets\EnglandFlag.png" />
     <Content Include="Assets\Exit.png" />
     <Content Include="Assets\GameBackground.jpg" />
     <Content Include="Assets\Settings.png" />
+    <Content Include="Assets\SpainFlag.png" />
     <Content Include="Assets\Stripes.jpg" />
     <Content Include="Assets\worms.jpg" />
     <Content Include="Properties\Default.rd.xml" />
