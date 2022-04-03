@@ -14,12 +14,12 @@
             <Setter Property="Background" Value="#5BC0DE"/>
             <Setter Property="Foreground" Value="White"/>
             <Setter Property="CornerRadius" Value="2"/>
-            <Setter Property="FontFamily" Value="/Fonts/#ABeeZee-Regular"/>
+            <Setter Property="FontFamily" Value="ABeeZee"/>
             <Setter Property="FontSize" Value="20"/>
         </Style>
 
         <Style TargetType="TextBlock">
-            <Setter Property="FontFamily" Value="/Assets/#ABeeZee-Regular"/>
+            <Setter Property="FontFamily" Value="ABeeZee"/>
         </Style>
     </Page.Resources>
 
@@ -66,7 +66,7 @@
                        Text="100%" 
                        HorizontalAlignment="Center" 
                        FontSize="20" 
-                       Foreground="#7A7A7A"/>
+                       Foreground="#7A7A7A" FontFamily="ABeeZee"/>
 
             <ProgressBar BorderBrush="Black" 
                          BorderThickness="1" 

@@ -22,15 +22,68 @@ namespace DSI_Worms
     /// </summary>
     public sealed partial class Settings : Page
     {
+
+        public bool general;
+        public bool interfaz;
+        public bool video;
+        public bool audio;
+
         public Settings()
         {
             this.InitializeComponent();
+            general = true;
+            General.IsChecked = true;
+
+            VideoSettings.Visibility = Visibility.Collapsed;
+            AudioSettings.Visibility = Visibility.Collapsed;
         }
 
         // Navega al menú de inicio
         private void On_Back(object sender, TappedRoutedEventArgs e)
         {
             if (Frame.CanGoBack) Frame.GoBack();
+        }
+
+        private void General_Checked(object sender, RoutedEventArgs e)
+        {
+            general = true;
+            GeneralSettings.Visibility = Visibility.Visible;
+
+            video = false;
+            Video.IsChecked = false;
+            VideoSettings.Visibility = Visibility.Collapsed;
+
+            audio = false;
+            Audio.IsChecked = false;
+            AudioSettings.Visibility = Visibility.Collapsed;
+        }
+
+        private void Video_Checked(object sender, RoutedEventArgs e)
+        {
+            general = false;
+            General.IsChecked = false;
+            GeneralSettings.Visibility = Visibility.Collapsed;
+
+            video = true;
+            VideoSettings.Visibility = Visibility.Visible;
+
+            audio = false;
+            Audio.IsChecked = false;
+            AudioSettings.Visibility = Visibility.Collapsed;
+        }
+
+        private void Audio_Checked(object sender, RoutedEventArgs e)
+        {
+            general = false;
+            General.IsChecked = false;
+            GeneralSettings.Visibility = Visibility.Collapsed;
+
+            video = false;
+            Video.IsChecked = false;
+            VideoSettings.Visibility = Visibility.Collapsed;
+
+            audio = true;
+            AudioSettings.Visibility = Visibility.Visible;
         }
     }
 }

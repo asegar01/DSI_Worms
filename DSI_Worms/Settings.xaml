@@ -6,19 +6,21 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    RequestedTheme="Light"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Page.Resources>
         <Style TargetType="TextBlock">
-            <Setter Property="FontFamily" Value="/Assets/#ABeeZee-Regular"/>
+            <Setter Property="FontFamily" Value="ABeeZee"/>
             <Setter Property="FontSize" Value="18"/>
             <Setter Property="Foreground" Value="#232323"/>
             <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="30"/>
         </Style>
 
         <Style TargetType="ToggleButton">
             <Setter Property="Background" Value="#C9F1FD"/>
-            <Setter Property="FontFamily" Value="/Fonts/#ABeeZee-Regular"/>
+            <Setter Property="FontFamily" Value="ABeeZee"/>
             <Setter Property="FontSize" Value="22"/>
             <Setter Property="Width" Value="280"/>
             <Setter Property="Height" Value="40"/>
@@ -28,14 +30,29 @@
         </Style>
 
         <Style TargetType="ToggleSwitch">
-            <Setter Property="Foreground" Value="Red"/>
+            <Setter Property="Margin" Value="25"/>
+            <Setter Property="Width" Value="50"/>
+            <Setter Property="OnContent" Value=""/>
+            <Setter Property="OffContent" Value=""/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
 
         <Style TargetType="ComboBox">
             <Setter Property="BorderBrush" Value="DimGray"/>
             <Setter Property="BorderThickness" Value="1.5"/>
             <Setter Property="CornerRadius" Value="5"/>
+            <Setter Property="Margin" Value="25"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
         </Style>
+
+        <Style TargetType="Slider">
+            <Setter Property="Margin" Value="25"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="Background" Value="LightGray"/>
+            <Setter Property="Value" Value="50"/>
+            <Setter Property="IsThumbToolTipEnabled" Value="False"/>
+        </Style>
+
     </Page.Resources>
 
     <Grid>
@@ -73,67 +90,138 @@
             <StackPanel Orientation="Vertical"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
-                
+
                 <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center"
                             Margin="0, 70, 0, 0">
-                    
-                    <ToggleButton x:Name="General" Content="General" IsChecked="True"/>
-                    <ToggleButton x:Name="Video" Content="Vídeo" IsChecked="False"/>
-                    <ToggleButton x:Name="Audio" Content="Audio" IsChecked="False"/>
-                    
+                    <ToggleButton x:Name="General" Content="General" Checked="General_Checked"/>
+                    <ToggleButton x:Name="Video" Content="Vídeo" Checked="Video_Checked"/>
+                    <ToggleButton x:Name="Audio" Content="Audio" Checked="Audio_Checked"/>
                 </StackPanel>
 
                 <Grid x:Name="Configuration">
-                    <Rectangle Fill="White" Height="450" Width="840" StrokeThickness="1" Stroke="Gray" Grid.ColumnSpan="2"/>
 
-                    <StackPanel x:Name="GeneralSettings" 
-                                Visibility="Visible"
-                                Orientation="Vertical"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center">
-                        
-                        <StackPanel Orientation="Horizontal" Margin="50, 0, 50, 50">
-                            <TextBlock Text="Pantalla Completa"/>
-                            <ToggleSwitch OffContent="" OnContent="" Margin="150, 0, 0, 0" Width="45"/>
-                        </StackPanel>
-                        
-                        <StackPanel Orientation="Horizontal" Margin="50, 0, 50, 50">
+                    <Rectangle Fill="White" 
+                               Height="450" 
+                               Width="840" 
+                               StrokeThickness="1" 
+                               Stroke="Gray" 
+                               Grid.ColumnSpan="2"/>
+
+                    <Grid x:Name="GeneralSettings">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Vertical" 
+                                    HorizontalAlignment="Right" 
+                                    VerticalAlignment="Center"
+                                    Width="250">
+                            
+                            <TextBlock Text="Pantalla completa"/>
                             <TextBlock Text="Subtítulos"/>
-                            <ToggleSwitch OffContent="" OnContent="" Margin="215, 0, 0, 0" Width="45"/>
-                        </StackPanel>
-                        
-                        <StackPanel Orientation="Horizontal" Margin="50, 0, 0, 0">
                             <TextBlock Text="Idioma"/>
-                            <ComboBox Margin="230, 0, 0, 0" SelectedItem="Assets/SpainFlag.png">
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" 
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" 
+                                    Grid.Column="1">
+
+                            <ToggleSwitch/>
+
+                            <ToggleSwitch/>
+
+                            <ComboBox SelectedIndex="0">
                                 <ComboBoxItem>
-                                    <Image Source="Assets/SpainFlag.png" Width="40" Height="30"/>
+                                    <Image Source="Assets/SpainFlag.png" Width="35" Height="30"/>
                                 </ComboBoxItem>
                                 <ComboBoxItem>
-                                    <Image Source="Assets/EnglandFlag.png" Width="40" Height="30"/>
+                                    <Image Source="Assets/EnglandFlag.png" Width="35" Height="30"/>
                                 </ComboBoxItem>
                             </ComboBox>
+
                         </StackPanel>
-                        
-                    </StackPanel>
+                    </Grid>
 
-                    <StackPanel x:Name="VideoSettings"
-                                Visibility="Visible"
-                                Orientation="Vertical"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center">
-                        
-                        
-                    </StackPanel>
+                    <Grid x:Name="VideoSettings">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
 
-                    <StackPanel x:Name="AudioSettings"
-                                Visibility="Visible"
-                                Orientation="Vertical"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center">
+                        <StackPanel Orientation="Vertical" 
+                                    HorizontalAlignment="Right" 
+                                    VerticalAlignment="Center"
+                                    Width="250">
+                            
+                            <TextBlock Text="Calidad general"/>
+                            <TextBlock Text="Calidad de las partículas"/>
+                            <TextBlock Text="Calidad de texturas"/>
+                            <TextBlock Text="RTX"/>
+                        </StackPanel>
 
-                        
-                    </StackPanel>
+                        <StackPanel Orientation="Vertical" 
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" 
+                                    Grid.Column="1">
+
+                            <ComboBox SelectedIndex="1">
+                                <ComboBoxItem Content="Extrema"/>
+                                <ComboBoxItem Content="Alta"/>
+                                <ComboBoxItem Content="Media"/>
+                                <ComboBoxItem Content="Baja"/>
+                            </ComboBox>
+
+                            <ComboBox SelectedIndex="0">
+                                <ComboBoxItem Content="Extrema"/>
+                                <ComboBoxItem Content="Alta"/>
+                                <ComboBoxItem Content="Media"/>
+                                <ComboBoxItem Content="Baja"/>
+                            </ComboBox>
+
+                            <ComboBox SelectedIndex="0">
+                                <ComboBoxItem Content="Extrema"/>
+                                <ComboBoxItem Content="Alta"/>
+                                <ComboBoxItem Content="Media"/>
+                                <ComboBoxItem Content="Baja"/>
+                            </ComboBox>
+
+                            <ToggleSwitch/>
+
+                        </StackPanel>
+                    </Grid>
+
+                    <Grid x:Name="AudioSettings">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Orientation="Vertical" 
+                                    HorizontalAlignment="Right" 
+                                    VerticalAlignment="Center"
+                                    Width="250">
+
+                            <TextBlock Text="Volumen general"/>
+                            <TextBlock Text="Música"/>
+                            <TextBlock Text="Efectos de sonido"/>
+                        </StackPanel>
+
+                        <StackPanel Orientation="Vertical" 
+                                    HorizontalAlignment="Center" 
+                                    VerticalAlignment="Center" 
+                                    Grid.Column="1">
+
+                            <Slider/>
+
+                            <Slider/>
+
+                            <Slider/>
+
+                        </StackPanel>
+                    </Grid>
                 </Grid>
             </StackPanel>
         </Grid>
