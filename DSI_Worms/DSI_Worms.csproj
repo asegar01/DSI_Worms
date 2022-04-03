@@ -140,13 +140,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\Back.png" />
+    <Content Include="Assets\baseball.png" />
+    <Content Include="Assets\boxeo.png" />
+    <Content Include="Assets\coin.png" />
     <Content Include="Assets\Customization.png" />
+    <Content Include="Assets\dinamita.png" />
     <Content Include="Assets\EnglandFlag.png" />
     <Content Include="Assets\Exit.png" />
     <Content Include="Assets\GameBackground.jpg" />
+    <Content Include="Assets\grenade.png" />
+    <Content Include="Assets\katana.png" />
+    <Content Include="Assets\lock.png" />
+    <Content Include="Assets\mina.png" />
+    <Content Include="Assets\puno.png" />
+    <Content Include="Assets\rama.png" />
     <Content Include="Assets\Settings.png" />
     <Content Include="Assets\SpainFlag.png" />
     <Content Include="Assets\Stripes.jpg" />
+    <Content Include="Assets\weapon1.png" />
+    <Content Include="Assets\weapon3.png" />
+    <Content Include="Assets\weapon4.png" />
+    <Content Include="Assets\weapon5.png" />
     <Content Include="Assets\worms.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
