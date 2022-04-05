@@ -23,52 +23,53 @@
         </Style>
     </Page.Resources>
 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/Stripes.jpg" Opacity="0.4"/>
-        </Grid.Background>
+    <Viewbox Stretch="Uniform">
+        <Grid Width="1200" Height="800">
+            <Grid.Background>
+                <ImageBrush Stretch="Fill" ImageSource="Assets/Stripes.jpg" Opacity="0.4"/>
+            </Grid.Background>
 
-        <StackPanel Orientation="Vertical" 
+            <StackPanel Orientation="Vertical" 
                     HorizontalAlignment="Center" 
                     VerticalAlignment="Center">
 
-            <Grid>
-                <Border CornerRadius="260">
-                    <Rectangle Width="500"
+                <Grid>
+                    <Border CornerRadius="260">
+                        <Rectangle Width="500"
                            Height="290"
                            Fill="White"/>
-                </Border>
+                    </Border>
 
-                <Image Margin="60"
+                    <Image Margin="60"
                    Source="Assets/worms.jpg" 
                    Width="480"/>
-            </Grid>
+                </Grid>
 
-            <Button Content="JUGAR" 
+                <Button Content="JUGAR" 
                     HorizontalAlignment="Center" 
                     Margin="20" 
                     Width="300" 
                     Height="40"
                     Click="On_Play">
-                <Button.Resources>
-                    <ResourceDictionary>
-                        <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#71D7F5"/>
-                        <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
-                        <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#71D7F5"/>
-                        <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#71D7F5"/>
-                        <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
-                        <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#71D7F5"/>
-                    </ResourceDictionary>
-                </Button.Resources>
-            </Button>
+                    <Button.Resources>
+                        <ResourceDictionary>
+                            <SolidColorBrush x:Key="ButtonBackgroundPointerOver" Color="#71D7F5"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPointerOver" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPointerOver" Color="#71D7F5"/>
+                            <SolidColorBrush x:Key="ButtonBackgroundPressed" Color="#71D7F5"/>
+                            <SolidColorBrush x:Key="ButtonForegroundPressed" Color="White"/>
+                            <SolidColorBrush x:Key="ButtonBorderBrushPressed" Color="#71D7F5"/>
+                        </ResourceDictionary>
+                    </Button.Resources>
+                </Button>
 
-            <TextBlock Margin="0, 60, 0, 0"
+                <TextBlock Margin="0, 60, 0, 0"
                        Text="100%" 
                        HorizontalAlignment="Center" 
                        FontSize="20" 
                        Foreground="#7A7A7A" FontFamily="ABeeZee"/>
 
-            <ProgressBar BorderBrush="Black" 
+                <ProgressBar BorderBrush="Black" 
                          BorderThickness="1" 
                          Margin="10" 
                          Background="White" 
@@ -78,43 +79,44 @@
                          Width="380"
                          CornerRadius="2"/>
 
-            <Grid>
-                <Border CornerRadius="40">
-                    <Rectangle Margin="10" 
+                <Grid>
+                    <Border CornerRadius="40">
+                        <Rectangle Margin="10" 
                            Width="650" 
                            Height="70">
-                        <Rectangle.Fill>
-                            <SolidColorBrush Color="#D9EDF7"/>
-                        </Rectangle.Fill>
-                    </Rectangle>
-                </Border>
-                
-                <TextBlock Text="Puedes personalizar tus tropas a través del menú 'Personalización' en la pantalla de inicio" 
+                            <Rectangle.Fill>
+                                <SolidColorBrush Color="#D9EDF7"/>
+                            </Rectangle.Fill>
+                        </Rectangle>
+                    </Border>
+
+                    <TextBlock Text="Puedes personalizar tus tropas a través del menú 'Personalización' en la pantalla de inicio" 
                            HorizontalAlignment="Center" 
                            VerticalAlignment="Center"
                            Foreground="#1565C0"/>
-            </Grid>
-        </StackPanel>
+                </Grid>
+            </StackPanel>
 
-        <Image Source="Assets/Exit.png" 
+            <Image Source="Assets/Exit.png" 
                Width="80" 
                HorizontalAlignment="Left" 
                VerticalAlignment="Bottom"
                Margin="20"
                Tapped="On_Exit"/>
 
-        <Image Source="Assets/Settings.png" 
+            <Image Source="Assets/Settings.png" 
                Width="80" 
                HorizontalAlignment="Left" 
                VerticalAlignment="Top"
                Margin="20"
                Tapped="On_Settings"/>
 
-        <Image Source="Assets/Customization.png" 
+            <Image Source="Assets/Customization.png" 
                Width="80" 
                HorizontalAlignment="Right" 
                VerticalAlignment="Top"
                Margin="20"
                Tapped="On_Customization"/>
-    </Grid>
+        </Grid>
+    </Viewbox>
 </Page>
