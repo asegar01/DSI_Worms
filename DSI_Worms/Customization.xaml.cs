@@ -32,5 +32,20 @@ namespace DSI_Worms
         {
             if (Frame.CanGoBack) Frame.GoBack();
         }
+
+        private void Ropa_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Sombreros_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Camuflaje_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
