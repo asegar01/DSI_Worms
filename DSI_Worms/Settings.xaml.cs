@@ -24,7 +24,6 @@ namespace DSI_Worms
     {
 
         public bool general;
-        public bool interfaz;
         public bool video;
         public bool audio;
 
