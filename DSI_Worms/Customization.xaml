@@ -442,7 +442,9 @@
                                Stroke="Gray" 
                                Grid.ColumnSpan="2"/>
                 <Image Source="Assets/gusano (1).png" Margin="80,0,80,0" Width="200" VerticalAlignment="Center"/>
-                <Image Source="Assets/CapHatWitch3.png" Margin="30,52,100,0" Width="200" VerticalAlignment="Top"/>
+                
+                       
+                       
 
             </Grid>
         </Grid>
