@@ -51,583 +51,578 @@
             <Setter Property="IsThumbToolTipEnabled" Value="False"/>
         </Style>
 
+        <Style TargetType="Button">
+            <Setter Property="CornerRadius" Value="5"/>
+        </Style>
+
     </Page.Resources>
 
-    <Grid>
-        <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="Assets/GameBackground.jpg" Opacity="0.8"/>
-        </Grid.Background>
-
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition/>
-                <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-
-            <Image Source="Assets/StoreLogo.png" 
-                   Grid.Column="2"
-                   VerticalAlignment="Bottom"
-                   Width="100" 
-                   Margin="20"
-                   Tapped="Store_Tapped"/>
-
-            <Image Source="Assets/StoreLogo.png" 
-                   Grid.Column="2"
-                   VerticalAlignment="Bottom"
-                   Width="100" 
-                   Margin="20"
-                   Tapped="Store_Tapped"/>
-        </Grid>
-        <Grid x:Name="StorePage">
+    <Viewbox Stretch="Uniform">
+        <Grid Width="1200" Height="800">
             <Grid.Background>
-                <SolidColorBrush Color="White" Opacity="0.6"/>
+                <ImageBrush Stretch="Fill" ImageSource="Assets/GameBackground.jpg" Opacity="0.8"/>
             </Grid.Background>
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="200"/>
-                <RowDefinition Height="Auto"/>
-            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
 
-            <Image Source="Assets/Back.png" 
+                <Image Source="Assets/StoreLogo.png" 
+                   Grid.Column="2"
+                   VerticalAlignment="Bottom"
+                   Width="100" 
+                   Margin="20"
+                   Tapped="Store_Tapped"/>
+
+                <Image Source="Assets/StoreLogo.png" 
+                   Grid.Column="2"
+                   VerticalAlignment="Bottom"
+                   Width="100" 
+                   Margin="20"
+                   Tapped="Store_Tapped"/>
+            </Grid>
+            <Grid x:Name="StorePage">
+                <Grid.Background>
+                    <SolidColorBrush Color="White" Opacity="0.6"/>
+                </Grid.Background>
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Image Source="Assets/Back.png" 
                Width="100" 
                HorizontalAlignment="Left" 
                VerticalAlignment="Top"
                Margin="20"
                Tapped="On_Back"/>
 
-            <StackPanel Orientation="Horizontal" Margin="0,20,20,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="50">
-                <Image Source="Assets/coin.png" Margin="10"/>
-                <TextBlock Text="510" Foreground="Black" FontWeight="Bold" FontSize="25"/>
-            </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="0,20,20,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="50">
+                    <Image Source="Assets/coin.png" Margin="10"/>
+                    <TextBlock Text="510" Foreground="Black" FontWeight="Bold" FontSize="25"/>
+                </StackPanel>
 
-            <StackPanel Orientation="Vertical">
-                <TextBlock Margin="0, 80, 0, 0"
+                <StackPanel Orientation="Vertical">
+                    <TextBlock Margin="0, 50, 0, 0"
                        Text="TIENDA"
                        HorizontalAlignment="Center"
                        FontSize="40"
                        FontWeight="SemiBold"
                        Foreground="#00A4D3"/>
 
-            </StackPanel>
+                    <Rectangle Width="700" 
+                       Height="3"
+                       Fill="#00A4D3"/>
 
-            <Grid Grid.Row="2">
-                <StackPanel Orientation="Vertical"
+                </StackPanel>
+
+                <Grid Grid.Row="2" Margin="0, -60, 0, 0">
+                    <StackPanel Orientation="Vertical"
                         HorizontalAlignment="Center"
                         VerticalAlignment="Center">
 
+<<<<<<< Updated upstream
                     <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center">
                         <ToggleButton x:Name="Defuego" Content="Armas de Fuego" Checked="Defuego_Checked"/>
                         <ToggleButton x:Name="CuerpoaCuerpo" Content="Cuerpo a cuerpo" Checked="CuerpoaCuerpo_Checked"/>
                         <ToggleButton x:Name="Explosivos" Content="Explosivos" Checked="Explosivos_Checked"/>
                     </StackPanel>
+=======
+                        <StackPanel Orientation="Horizontal"
+                            HorizontalAlignment="Center"
+                            Margin="0, 70, 0, 0">
+                            <ToggleButton x:Name="Defuego" Content="Armas de Fuego" Checked="Defuego_Checked"/>
+                            <ToggleButton x:Name="CuerpoaCuerpo" Content="Cuerpo a cuerpo" Checked="CuerpoaCuerpo_Checked"/>
+                            <ToggleButton x:Name="Explosivos" Content="Explosivos" Checked="Explosivos_Checked"/>
+                        </StackPanel>
+>>>>>>> Stashed changes
 
-                    <Grid x:Name="Store">
+                        <Grid x:Name="Store">
 
-                        <Rectangle Fill="White" 
+                            <Rectangle Fill="White" 
                                Height="500" 
                                Width="840" 
                                StrokeThickness="1" 
-                               Stroke="Gray" 
+                               Stroke="#606060" 
                                Grid.ColumnSpan="2"/>
 
 
-                        <!--_______________________________________________Fuego_______________________________________________-->
+                            <!--_______________________________________________Fuego_______________________________________________-->
 
-                        <Grid x:Name="Fuego" Margin="20">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
+                            <Grid x:Name="Fuego" Margin="20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
 
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                                     Background="White"
-                                    CornerRadius="1"
                                     BorderBrush="#00A4D3" Margin="20" Grid.Column="0" Grid.Row="0">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="#20C4F3"/>
-                                    <Image Source="Assets/weapon3.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#C9F1FD"/>
+                                        <Image Source="Assets/weapon3.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
 
-                                    <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
-                                        <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
-                                        <TextBlock Text="510" Foreground="Blue" FontWeight="Bold"/>
-                                    </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
+                                            <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
+                                            <TextBlock Text="510" Foreground="#4DD7Fa" FontWeight="Bold"/>
+                                        </StackPanel>
 
-                                </Grid>
-                            </Button>
+                                    </Grid>
+                                </Button>
 
 
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                                     Background="White"
-                                    CornerRadius="1"
                                     BorderBrush="Gray" Margin="20" Grid.Column="1" Grid.Row="0">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="#A0E4F9"/>
-                                    <Image Source="Assets/weapon4.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#C9F1FD"/>
+                                        <Image Source="Assets/weapon4.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
 
-                                    <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
-                                        <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
-                                        <TextBlock Text="860" Foreground="Green" FontWeight="Bold"/>
-                                    </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
+                                            <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
+                                            <TextBlock Text="860" Foreground="#629C44" FontWeight="Bold"/>
+                                        </StackPanel>
 
-                                </Grid>
-                            </Button>
+                                    </Grid>
+                                </Button>
 
 
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                                     Background="White"
-                                    CornerRadius="1"
                                     BorderBrush="Gray" Margin="20" Grid.Column="2" Grid.Row="0">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="#A0E4F9"/>
-                                    <Image Source="Assets/weapon1.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#C9F1FD"/>
+                                        <Image Source="Assets/weapon1.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
 
-                                    <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
-                                        <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
-                                        <TextBlock Text="1020" Foreground="Green" FontWeight="Bold" Width="76"/>
-                                    </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
+                                            <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
+                                            <TextBlock Text="1020" Foreground="#629C44" FontWeight="Bold" Width="76"/>
+                                        </StackPanel>
 
-                                </Grid>
-                            </Button>
+                                    </Grid>
+                                </Button>
 
 
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
                                     Background="White"
-                                    CornerRadius="1"
                                     BorderBrush="Gray" Margin="20" Grid.Column="3" Grid.Row="0">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="Gray"/>
-                                    <Image Source="Assets/weapon5.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="Gray"/>
+                                        <Image Source="Assets/weapon5.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
 
-                                    <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
-                                        <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
-                                        <TextBlock Text="1450" Foreground="Gray" FontWeight="Bold" Width="76"/>
-                                    </StackPanel>
+                                        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
+                                            <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
+                                            <TextBlock Text="1450" Foreground="#606060" FontWeight="Bold" Width="76"/>
+                                        </StackPanel>
 
-                                </Grid>
-                            </Button>
+                                    </Grid>
+                                </Button>
 
 
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
                                     Background="White"
-                                    CornerRadius="1"
                                     BorderBrush="Gray" Margin="20" Grid.Column="0" Grid.Row="1">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="Gray"/>
-                                    <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#606060"/>
+                                        <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
 
-                                </Grid>
-                            </Button>
+                                    </Grid>
+                                </Button>
 
 
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
                                     Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="1" Grid.Row="1">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="Gray"/>
-                                    <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+                                    BorderBrush="#606060" Margin="20" Grid.Column="1" Grid.Row="1">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#606060"/>
+                                        <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
 
-                                </Grid>
-                            </Button>
+                                    </Grid>
+                                </Button>
 
 
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
                                     Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="2" Grid.Row="1">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="Gray"/>
-                                    <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+                                    BorderBrush="#606060" Margin="20" Grid.Column="2" Grid.Row="1">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#606060"/>
+                                        <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
 
-                                </Grid>
-                            </Button>
+                                    </Grid>
+                                </Button>
 
 
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
                                     Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="3" Grid.Row="1">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="Gray"/>
-                                    <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+                                    BorderBrush="#606060" Margin="20" Grid.Column="3" Grid.Row="1">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#606060"/>
+                                        <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
 
-                                </Grid>
-                            </Button>
+                                    </Grid>
+                                </Button>
+
+                            </Grid>
+
+
+                            <!--_______________________________________________Cuerpo a Cuerpo_______________________________________-->
+
+
+                            <Grid x:Name="CaC" Margin="20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="0" Grid.Row="0">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#C9F1FD"/>
+                                        <Image Source="Assets/puno.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
+                                            <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
+                                            <TextBlock Text="0" Foreground="#629C44" FontWeight="Bold" Width="76"/>
+                                        </StackPanel>
+
+                                    </Grid>
+                                </Button>
+
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="1" Grid.Row="0">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#C9F1FD"/>
+                                        <Image Source="Assets/rama.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
+                                            <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
+                                            <TextBlock Text="90" Foreground="#629C44" FontWeight="Bold" Width="76"/>
+                                        </StackPanel>
+
+                                    </Grid>
+                                </Button>
+
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="2" Grid.Row="0">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#C9F1FD"/>
+                                        <Image Source="Assets/boxeo.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
+                                            <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
+                                            <TextBlock Text="240" Foreground="#629C44" FontWeight="Bold" Width="76"/>
+                                        </StackPanel>
+
+                                    </Grid>
+                                </Button>
+
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="3" Grid.Row="0">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#C9F1FD"/>
+                                        <Image Source="Assets/baseball.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
+                                            <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
+                                            <TextBlock Text="450" Foreground="#629C44" FontWeight="Bold" Width="76"/>
+                                        </StackPanel>
+
+                                    </Grid>
+                                </Button>
+
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="0" Grid.Row="1">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#C9F1FD"/>
+                                        <Image Source="Assets/katana.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
+                                            <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
+                                            <TextBlock Text="1010" Foreground="#629C44" FontWeight="Bold" Width="76"/>
+                                        </StackPanel>
+
+                                    </Grid>
+                                </Button>
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="1" Grid.Row="1">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#606060"/>
+                                        <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                    </Grid>
+                                </Button>
+
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="2" Grid.Row="1">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#606060"/>
+                                        <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                    </Grid>
+                                </Button>
+
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="3" Grid.Row="1">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#606060"/>
+                                        <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                    </Grid>
+                                </Button>
+
+                            </Grid>
+
+                            <!--_______________________________________________EXPLOSIVOS___________________________________________-->
+
+                            <Grid x:Name="Explos" Margin="20">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="0" Grid.Row="0">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#C9F1FD"/>
+                                        <Image Source="Assets/grenade.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
+                                            <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
+                                            <TextBlock Text="360" Foreground="#629C44" FontWeight="Bold"/>
+                                        </StackPanel>
+
+                                    </Grid>
+                                </Button>
+
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="1" Grid.Row="0">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#C9F1FD"/>
+                                        <Image Source="Assets/mina.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
+                                            <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
+                                            <TextBlock Text="720" Foreground="#629C44" FontWeight="Bold"/>
+                                        </StackPanel>
+
+                                    </Grid>
+                                </Button>
+
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="2" Grid.Row="0">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#C9F1FD"/>
+                                        <Image Source="Assets/dinamita.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
+                                            <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
+                                            <TextBlock Text="970" Foreground="#629C44" FontWeight="Bold" Width="76"/>
+                                        </StackPanel>
+
+                                    </Grid>
+                                </Button>
+
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="3" Grid.Row="0">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#606060"/>
+                                        <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                    </Grid>
+                                </Button>
+
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="0" Grid.Row="1">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#606060"/>
+                                        <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                    </Grid>
+                                </Button>
+
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="1" Grid.Row="1">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#606060"/>
+                                        <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                    </Grid>
+                                </Button>
+
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="2" Grid.Row="1">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#606060"/>
+                                        <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                    </Grid>
+                                </Button>
+
+
+                                <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
+                                    Background="White"
+                                    BorderBrush="#606060" Margin="20" Grid.Column="3" Grid.Row="1">
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="120"/>
+                                            <RowDefinition Height="40"/>
+                                        </Grid.RowDefinitions>
+                                        <Rectangle Fill="#606060"/>
+                                        <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
+
+                                    </Grid>
+                                </Button>
+
+                            </Grid>
+
 
                         </Grid>
-
-
-                        <!--_______________________________________________Cuerpo a Cuerpo_______________________________________-->
-
-
-                        <Grid x:Name="CaC" Margin="20">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="0" Grid.Row="0">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="#A0E4F9"/>
-                                    <Image Source="Assets/puno.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                    <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
-                                        <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
-                                        <TextBlock Text="0" Foreground="Green" FontWeight="Bold" Width="76"/>
-                                    </StackPanel>
-
-                                </Grid>
-                            </Button>
-
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="1" Grid.Row="0">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="#A0E4F9"/>
-                                    <Image Source="Assets/rama.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                    <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
-                                        <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
-                                        <TextBlock Text="90" Foreground="Green" FontWeight="Bold" Width="76"/>
-                                    </StackPanel>
-
-                                </Grid>
-                            </Button>
-
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="2" Grid.Row="0">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="#A0E4F9"/>
-                                    <Image Source="Assets/boxeo.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                    <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
-                                        <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
-                                        <TextBlock Text="240" Foreground="Green" FontWeight="Bold" Width="76"/>
-                                    </StackPanel>
-
-                                </Grid>
-                            </Button>
-
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="3" Grid.Row="0">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="#A0E4F9"/>
-                                    <Image Source="Assets/baseball.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                    <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
-                                        <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
-                                        <TextBlock Text="450" Foreground="Green" FontWeight="Bold" Width="76"/>
-                                    </StackPanel>
-
-                                </Grid>
-                            </Button>
-
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="0" Grid.Row="1">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="#A0E4F9"/>
-                                    <Image Source="Assets/katana.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                    <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
-                                        <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
-                                        <TextBlock Text="1010" Foreground="Green" FontWeight="Bold" Width="76"/>
-                                    </StackPanel>
-
-                                </Grid>
-                            </Button>
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="1" Grid.Row="1">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="Gray"/>
-                                    <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                </Grid>
-                            </Button>
-
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="2" Grid.Row="1">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="Gray"/>
-                                    <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                </Grid>
-                            </Button>
-
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="3" Grid.Row="1">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="Gray"/>
-                                    <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                </Grid>
-                            </Button>
-
-                        </Grid>
-
-                        <!--_______________________________________________EXPLOSIVOS___________________________________________-->
-
-                        <Grid x:Name="Explos" Margin="20">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                                <ColumnDefinition/>
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition/>
-                                <RowDefinition/>
-                            </Grid.RowDefinitions>
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="0" Grid.Row="0">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="#A0E4F9"/>
-                                    <Image Source="Assets/grenade.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                    <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
-                                        <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
-                                        <TextBlock Text="360" Foreground="Green" FontWeight="Bold"/>
-                                    </StackPanel>
-
-                                </Grid>
-                            </Button>
-
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="1" Grid.Row="0">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="#A0E4F9"/>
-                                    <Image Source="Assets/mina.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                    <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
-                                        <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
-                                        <TextBlock Text="720" Foreground="Green" FontWeight="Bold"/>
-                                    </StackPanel>
-
-                                </Grid>
-                            </Button>
-
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="2" Grid.Row="0">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="#A0E4F9"/>
-                                    <Image Source="Assets/dinamita.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                    <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="0,10,0,0">
-                                        <Image Source="Assets/coin.png" Margin="10, 0" Width="20"/>
-                                        <TextBlock Text="970" Foreground="Green" FontWeight="Bold" Width="76"/>
-                                    </StackPanel>
-
-                                </Grid>
-                            </Button>
-
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="3" Grid.Row="0">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="Gray"/>
-                                    <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                </Grid>
-                            </Button>
-
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="0" Grid.Row="1">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="Gray"/>
-                                    <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                </Grid>
-                            </Button>
-
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="1" Grid.Row="1">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="Gray"/>
-                                    <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                </Grid>
-                            </Button>
-
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="2" Grid.Row="1">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="Gray"/>
-                                    <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                </Grid>
-                            </Button>
-
-
-                            <Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsEnabled="False"
-                                    Background="White"
-                                    CornerRadius="1"
-                                    BorderBrush="Gray" Margin="20" Grid.Column="3" Grid.Row="1">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="120"/>
-                                        <RowDefinition Height="40"/>
-                                    </Grid.RowDefinitions>
-                                    <Rectangle Fill="Gray"/>
-                                    <Image Source="Assets/lock.png" Margin="21,0" Width="90" VerticalAlignment="Center"/>
-
-                                </Grid>
-                            </Button>
-
-                        </Grid>
-
-
-                    </Grid>
-                </StackPanel>
+                    </StackPanel>
+                </Grid>
             </Grid>
         </Grid>
-    </Grid>
-
+    </Viewbox>
 </Page>
