@@ -35,17 +35,35 @@ namespace DSI_Worms
 
         private void Ropa_Checked(object sender, RoutedEventArgs e)
         {
+            myRopa.Visibility = Visibility.Visible;
 
+            Sombreros.IsChecked = false;
+            mySombreros.Visibility = Visibility.Collapsed;
+
+            Camuflaje.IsChecked = false;
+            myCamuflajes.Visibility = Visibility.Collapsed;
         }
 
         private void Sombreros_Checked(object sender, RoutedEventArgs e)
         {
+            Ropa.IsChecked = false;
+            myRopa.Visibility = Visibility.Collapsed;
 
+            mySombreros.Visibility = Visibility.Visible;
+
+            Camuflaje.IsChecked = false;
+            myCamuflajes.Visibility = Visibility.Collapsed;
         }
 
         private void Camuflaje_Checked(object sender, RoutedEventArgs e)
         {
+            Ropa.IsChecked = false;
+            myRopa.Visibility = Visibility.Collapsed;
 
+            Sombreros.IsChecked = false;
+            mySombreros.Visibility = Visibility.Collapsed;
+
+            myCamuflajes.Visibility = Visibility.Visible;
         }
     }
 }

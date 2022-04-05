@@ -11,7 +11,7 @@
     <AssemblyName>DSI_Worms</AssemblyName>
     <DefaultLanguage>es-ES</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
-    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.19041.0</TargetPlatformVersion>
+    <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.18362.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
@@ -128,6 +128,9 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PauseMenu.xaml.cs">
+      <DependentUpon>PauseMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
@@ -139,24 +142,37 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\1f3a9.png" />
     <Content Include="Assets\Back.png" />
     <Content Include="Assets\baseball.png" />
+    <Content Include="Assets\body.png" />
     <Content Include="Assets\boxeo.png" />
+    <Content Include="Assets\Camiseta.png" />
+    <Content Include="Assets\Camiseta2.png" />
+    <Content Include="Assets\CapHatWitch3.png" />
     <Content Include="Assets\coin.png" />
     <Content Include="Assets\Customization.png" />
+    <Content Include="Assets\descarga %283%29.jpg" />
     <Content Include="Assets\dinamita.png" />
     <Content Include="Assets\EnglandFlag.png" />
     <Content Include="Assets\Exit.png" />
     <Content Include="Assets\GameBackground.jpg" />
     <Content Include="Assets\grenade.png" />
+    <Content Include="Assets\gusano %281%29.png" />
+    <Content Include="Assets\gusanocamuflado.png" />
+    <Content Include="Assets\jersey.png" />
     <Content Include="Assets\katana.png" />
     <Content Include="Assets\lock.png" />
+    <Content Include="Assets\mamf13551-sombrero-cholon.png.png" />
+    <Content Include="Assets\Mario_Cap.png" />
     <Content Include="Assets\mina.png" />
+    <Content Include="Assets\Pantalones.png" />
     <Content Include="Assets\puno.png" />
     <Content Include="Assets\rama.png" />
     <Content Include="Assets\Settings.png" />
     <Content Include="Assets\SpainFlag.png" />
     <Content Include="Assets\Stripes.jpg" />
+    <Content Include="Assets\transparent.png" />
     <Content Include="Assets\weapon1.png" />
     <Content Include="Assets\weapon3.png" />
     <Content Include="Assets\weapon4.png" />
@@ -187,6 +203,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PauseMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Settings.xaml">
       <SubType>Designer</SubType>
