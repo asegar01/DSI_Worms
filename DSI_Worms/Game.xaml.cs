@@ -40,10 +40,12 @@ namespace DSI_Worms
         private void Store_Tapped(object sender, TappedRoutedEventArgs e)
         {
             StorePage.Visibility = Visibility.Visible;
+            Pause.Visibility = Visibility.Collapsed;
         }
         private void On_Back(object sender, TappedRoutedEventArgs e)
         {
             StorePage.Visibility = Visibility.Collapsed;
+            Pause.Visibility = Visibility.Visible;
         }
 
         private void Defuego_Checked(object sender, RoutedEventArgs e)
@@ -77,6 +79,11 @@ namespace DSI_Worms
             CaC.Visibility = Visibility.Collapsed;
 
             Explos.Visibility = Visibility.Visible;
+        }
+
+        private void On_Pause(object sender, TappedRoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(PauseMenu));
         }
     }
 }

@@ -70,6 +70,14 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
+                <Image x:Name="Pause"
+                       Source="Assets/Pause.png"
+                       Grid.Column="2"
+                       VerticalAlignment="Top"
+                       Width="80"
+                       Margin="20"
+                       Tapped="On_Pause"/>
+
                 <Image Source="Assets/StoreLogo.png" 
                    Grid.Column="2"
                    VerticalAlignment="Bottom"
@@ -95,7 +103,7 @@
                 </Grid.RowDefinitions>
 
                 <Image Source="Assets/Back.png" 
-               Width="100" 
+               Width="80" 
                HorizontalAlignment="Left" 
                VerticalAlignment="Top"
                Margin="20"
