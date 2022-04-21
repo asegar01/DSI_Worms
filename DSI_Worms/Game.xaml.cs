@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.System;
+using Windows.Gaming.Input;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -28,12 +30,13 @@ namespace DSI_Worms
 
             StorePage.Visibility = Visibility.Collapsed;
 
+            FuegoButt.IsChecked = true;
             Fuego.Visibility = Visibility.Visible;
 
-            CuerpoaCuerpo.IsChecked = false;
+            CuerpoButt.IsChecked = false;
             CaC.Visibility = Visibility.Collapsed;
 
-            Explosivos.IsChecked = false;
+            ExplosivoButt.IsChecked = false;
             Explos.Visibility = Visibility.Collapsed;
         }
 
@@ -52,30 +55,30 @@ namespace DSI_Worms
         {
             Fuego.Visibility = Visibility.Visible;
 
-            CuerpoaCuerpo.IsChecked = false;
+            CuerpoButt.IsChecked = false;
             CaC.Visibility = Visibility.Collapsed;
 
-            Explosivos.IsChecked = false;
+            ExplosivoButt.IsChecked = false;
             Explos.Visibility = Visibility.Collapsed;
         }
 
         private void CuerpoaCuerpo_Checked(object sender, RoutedEventArgs e)
         {
-            Defuego.IsChecked = false;
+            FuegoButt.IsChecked = false;
             Fuego.Visibility = Visibility.Collapsed;
 
             CaC.Visibility = Visibility.Visible;
 
-            Explosivos.IsChecked = false;
+            ExplosivoButt.IsChecked = false;
             Explos.Visibility = Visibility.Collapsed;
         }
 
         private void Explosivos_Checked(object sender, RoutedEventArgs e)
         {
-            Defuego.IsChecked = false;
+            FuegoButt.IsChecked = false;
             Fuego.Visibility = Visibility.Collapsed;
 
-            CuerpoaCuerpo.IsChecked = false;
+            CuerpoButt.IsChecked = false;
             CaC.Visibility = Visibility.Collapsed;
 
             Explos.Visibility = Visibility.Visible;
@@ -84,6 +87,49 @@ namespace DSI_Worms
         private void On_Pause(object sender, TappedRoutedEventArgs e)
         {
             Frame.Navigate(typeof(PauseMenu));
+        }
+
+        private void Store_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case VirtualKey.Escape: On_Back(null, null); break;
+                case VirtualKey.GamepadB: On_Back(null, null); break;
+                case VirtualKey.GamepadLeftShoulder:
+                    if (FuegoButt.IsChecked.Value)
+                    {
+                        ExplosivoButt.Focus(FocusState.Keyboard);
+                        ExplosivoButt.IsChecked = true; Explosivos_Checked(null, null);
+                    }
+                    else if (ExplosivoButt.IsChecked.Value)
+                    {
+                        CuerpoButt.Focus(FocusState.Keyboard);
+                        CuerpoButt.IsChecked = true; CuerpoaCuerpo_Checked(null, null);
+                    }
+                    else
+                    {
+                        FuegoButt.Focus(FocusState.Keyboard);
+                        FuegoButt.IsChecked = true; Defuego_Checked(null, null);
+                    }
+                    break;
+                case VirtualKey.GamepadRightShoulder:
+                    if (CuerpoButt.IsChecked.Value)
+                    {
+                        ExplosivoButt.Focus(FocusState.Keyboard);
+                        ExplosivoButt.IsChecked = true; Explosivos_Checked(null, null);
+                    }
+                    else if (FuegoButt.IsChecked.Value)
+                    {
+                        CuerpoButt.Focus(FocusState.Keyboard);
+                        CuerpoButt.IsChecked = true; CuerpoaCuerpo_Checked(null, null);
+                    }
+                    else
+                    {
+                        FuegoButt.Focus(FocusState.Keyboard);
+                        FuegoButt.IsChecked = true; Defuego_Checked(null, null);
+                    }
+                    break;
+            }
         }
     }
 }

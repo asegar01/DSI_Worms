@@ -25,6 +25,9 @@ namespace DSI_Worms
         public Customization()
         {
             this.InitializeComponent();
+
+            Ropa_Checked(null, null);
+            Ropa.IsChecked = true;
         }
 
         // Navega al menú de inicio

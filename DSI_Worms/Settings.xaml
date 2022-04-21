@@ -55,7 +55,7 @@
 
     </Page.Resources>
 
-    <Viewbox Stretch="Uniform">
+    <Viewbox Stretch="Uniform" KeyDown="Viewbox_KeyDown">
         <Grid Width="1200" Height="800">
             <Grid.Background>
                 <ImageBrush Stretch="Fill" ImageSource="Assets/Stripes.jpg" Opacity="0.4"/>

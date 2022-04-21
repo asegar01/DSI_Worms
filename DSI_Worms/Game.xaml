@@ -92,7 +92,7 @@
                    Margin="20"
                    Tapped="Store_Tapped"/>
             </Grid>
-            <Grid x:Name="StorePage">
+            <Grid x:Name="StorePage" KeyDown="Store_KeyDown">
                 <Grid.Background>
                     <SolidColorBrush Color="White" Opacity="0.6"/>
                 </Grid.Background>
@@ -136,9 +136,9 @@
                         <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center"
                             Margin="0, 70, 0, 0">
-                            <ToggleButton x:Name="Defuego" Content="Armas de Fuego" Checked="Defuego_Checked"/>
-                            <ToggleButton x:Name="CuerpoaCuerpo" Content="Cuerpo a cuerpo" Checked="CuerpoaCuerpo_Checked"/>
-                            <ToggleButton x:Name="Explosivos" Content="Explosivos" Checked="Explosivos_Checked"/>
+                            <ToggleButton x:Name="FuegoButt" Content="Armas de Fuego" Checked="Defuego_Checked"/>
+                            <ToggleButton x:Name="CuerpoButt" Content="Cuerpo a cuerpo" Checked="CuerpoaCuerpo_Checked"/>
+                            <ToggleButton x:Name="ExplosivoButt" Content="Explosivos" Checked="Explosivos_Checked"/>
                         </StackPanel>
 
                         <Grid x:Name="Store">

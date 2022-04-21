@@ -12,6 +12,8 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.Gaming.Input;
+using Windows.System;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -35,7 +37,15 @@ namespace DSI_Worms
 
             VideoSettings.Visibility = Visibility.Collapsed;
             AudioSettings.Visibility = Visibility.Collapsed;
+
         }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            General.Focus(FocusState.Keyboard);
+        }
+
 
         // Navega al menú de inicio
         private void On_Back(object sender, TappedRoutedEventArgs e)
@@ -83,6 +93,49 @@ namespace DSI_Worms
 
             audio = true;
             AudioSettings.Visibility = Visibility.Visible;
+        }
+
+        private void Viewbox_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            switch (e.Key) 
+            {
+                case VirtualKey.Escape: On_Back(null, null); break;
+                case VirtualKey.GamepadB: On_Back(null, null); break;
+                case VirtualKey.GamepadLeftShoulder:
+                    if (general)
+                    {
+                        Audio.Focus(FocusState.Keyboard);
+                        Audio.IsChecked = true; Audio_Checked(null, null);
+                    }
+                    else if (video)
+                    {
+                        General.Focus(FocusState.Keyboard);
+                        General.IsChecked = true; General_Checked(null, null);
+                    }
+                    else
+                    {
+                        Video.Focus(FocusState.Keyboard);
+                        Video.IsChecked = true; Video_Checked(null, null);
+                    }
+                    break;
+                case VirtualKey.GamepadRightShoulder:
+                    if (general)
+                    {
+                        Video.Focus(FocusState.Keyboard);
+                        Video.IsChecked = true; Video_Checked(null, null);
+                    }
+                    else if (video)
+                    {
+                        Audio.Focus(FocusState.Keyboard);
+                        Audio.IsChecked = true; Audio_Checked(null, null);
+                    }
+                    else
+                    {
+                        General.Focus(FocusState.Keyboard);
+                        General.IsChecked = true; General_Checked(null, null);
+                    }
+                    break;
+            }
         }
     }
 }
