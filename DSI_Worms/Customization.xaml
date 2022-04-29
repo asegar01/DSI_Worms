@@ -442,9 +442,15 @@
                                Stroke="Gray" 
                                Grid.ColumnSpan="2"/>
                 <Image Source="Assets/gusano (1).png" Margin="80,0,80,0" Width="200" VerticalAlignment="Center"/>
+                <Image x:Name="GusanoCamuflaje" Source="Assets/gusanocamuflado.png" Margin="80,0,80,0" Width="200" VerticalAlignment="Center" />
+                <Image x:Name="GusanoCamiseta1" Source="Assets/gusanocamiseta1 .png" Margin="80,0,80,0" Width="200" VerticalAlignment="Center" />
+                <Image x:Name="GusanoCamiseta2" Source="Assets/gusanocamiseta2.png" Margin="80,0,80,0" Width="200" VerticalAlignment="Center" />
+                <Image x:Name="GusanoCamiseta3" Source="Assets/gusanocamiseta3.png" Margin="80,0,80,0" Width="200" VerticalAlignment="Center" />
+                <Image x:Name="GusanoCamiseta4" Source="Assets/gusanocamiseta4.png" Margin="80,0,80,0" Width="200" VerticalAlignment="Center" />
+               
                 
-                       
-                       
+
+
 
             </Grid>
         </Grid>

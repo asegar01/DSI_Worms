@@ -12,6 +12,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.ApplicationModel.DataTransfer;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -67,6 +68,18 @@ namespace DSI_Worms
             mySombreros.Visibility = Visibility.Collapsed;
 
             myCamuflajes.Visibility = Visibility.Visible;
+        }
+
+        private void Drag_Over(object sender, DragEventArgs e)
+        {
+            e.AcceptedOperation = DataPackageOperation.Copy;
+        }
+
+        private void Drag_Starting(UIElement sender, DragStartingEventArgs args)
+        {
+            ContentControl x = sender as ContentControl;
+            args.Data.SetText(x.Name);
+            args.Data.RequestedOperation = DataPackageOperation.Copy;
         }
     }
 }

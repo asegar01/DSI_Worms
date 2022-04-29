@@ -168,7 +168,12 @@
     <Content Include="Assets\GameBackground.jpg" />
     <Content Include="Assets\grenade.png" />
     <Content Include="Assets\gusano %281%29.png" />
+    <Content Include="Assets\gusanocamiseta1 .png" />
+    <Content Include="Assets\gusanocamiseta2.png" />
+    <Content Include="Assets\gusanocamiseta3.png" />
+    <Content Include="Assets\gusanocamiseta4.png" />
     <Content Include="Assets\gusanocamuflado.png" />
+    <Content Include="Assets\gusanovacio.png" />
     <Content Include="Assets\jersey.png" />
     <Content Include="Assets\katana.png" />
     <Content Include="Assets\lock.png" />
