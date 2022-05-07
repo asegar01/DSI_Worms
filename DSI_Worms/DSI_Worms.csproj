@@ -160,11 +160,13 @@
     <Content Include="Assets\Camiseta2.png" />
     <Content Include="Assets\CapHatWitch3.png" />
     <Content Include="Assets\coin.png" />
+    <Content Include="Assets\corazon.png" />
     <Content Include="Assets\Customization.png" />
     <Content Include="Assets\descarga %283%29.jpg" />
     <Content Include="Assets\dinamita.png" />
     <Content Include="Assets\EnglandFlag.png" />
     <Content Include="Assets\Exit.png" />
+    <Content Include="Assets\flecha.png" />
     <Content Include="Assets\GameBackground.jpg" />
     <Content Include="Assets\grenade.png" />
     <Content Include="Assets\gusano %281%29.png" />

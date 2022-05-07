@@ -22,8 +22,15 @@ namespace DSI_Worms
     /// <summary>
     /// Una página vacía que se puede usar de forma independiente o a la que se puede navegar dentro de un objeto Frame.
     /// </summary>
+    /// 
+
+
     public sealed partial class Game : Page
     {
+
+        private int moving = 0;
+        DispatcherTimer timer;
+
         public Game()
         {
             this.InitializeComponent();
@@ -38,6 +45,11 @@ namespace DSI_Worms
 
             ExplosivoButt.IsChecked = false;
             Explos.Visibility = Visibility.Collapsed;
+
+            timer = new DispatcherTimer();
+            timer.Tick += Update;
+            timer.Interval = new TimeSpan(100000);
+            timer.Start();
         }
 
         private void Store_Tapped(object sender, TappedRoutedEventArgs e)
@@ -130,6 +142,49 @@ namespace DSI_Worms
                     }
                     break;
             }
+        }
+
+        private void Update(object sender, object e)
+        {
+            Player.Translation = System.Numerics.Vector3.UnitX * (Player.Translation.X + moving);
+        }
+
+        private void Player_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            switch(e.Key)
+            {
+                case VirtualKey.A:
+                case VirtualKey.Left:
+                    moving = -1;
+                    PlayerScale.ScaleX = 1;
+                    break;
+                case VirtualKey.D:
+                case VirtualKey.Right:
+                    moving = 1;
+                    PlayerScale.ScaleX = -1;
+                    break;
+            }
+        }
+
+        private void Player_KeyUp(object sender, KeyRoutedEventArgs e)
+        {
+            moving = 0;
+        }
+
+        private void MoveLeft(object sender, PointerRoutedEventArgs e)
+        {
+            moving = -1;
+            PlayerScale.ScaleX = 1;
+        }
+        private void MoveRight(object sender, PointerRoutedEventArgs e)
+        {
+            moving = 1;
+            PlayerScale.ScaleX = -1;
+        }
+
+        private void Image_PointerExited(object sender, PointerRoutedEventArgs e)
+        {
+            moving = 0;
         }
     }
 }

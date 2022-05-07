@@ -85,14 +85,95 @@
                    Margin="20"
                    Tapped="Store_Tapped"/>
 
-                <Image Source="Assets/StoreLogo.png" 
-                   Grid.Column="2"
-                   VerticalAlignment="Bottom"
-                   Width="100" 
-                   Margin="20"
-                   Tapped="Store_Tapped"/>
+                <!--=============================GUSANOS====================================-->
+
+                <Canvas x:Name="GameCanvas">
+
+                    <StackPanel x:Name="GusanoEnemigo1" Orientation="Vertical" Width="80" Height="100" Canvas.Left="100" Canvas.Top="622">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/corazon.png" Width="20"/>
+                            <Image Source="Assets/corazon.png" Width="20"/>
+                            <Image Source="Assets/corazon.png" Width="20"/>
+                            <Image Source="Assets/corazon.png" Width="20"/>
+                        </StackPanel>
+                        <Image Source="Assets/gusanocamiseta4.png" Margin="20, 10" RenderTransformOrigin="0.5,0.5">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="-1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+                    </StackPanel>
+                    <Image Source="Assets/mamf13551-sombrero-cholon.png.png" Margin="20, 10" Canvas.Top="635" Height="21" Canvas.Left="53" Width="131" RenderTransformOrigin="0.5,0.5">
+                        <Image.RenderTransform>
+                            <CompositeTransform Rotation="-30"/>
+                        </Image.RenderTransform>
+                    </Image>
+
+                    <StackPanel x:Name="GusanoEnemigo2" Orientation="Vertical" Width="80" Height="100" Canvas.Left="480" Canvas.Top="622">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/corazon.png" Width="20"/>
+                            <Image Source="Assets/corazon.png" Width="20"/>
+                            <Image Source="Assets/corazon.png" Width="20"/>
+                        </StackPanel>
+                        <Image Source="Assets/gusanocamiseta2.png" Margin="20, 10"/>
+                    </StackPanel>
+
+                    <StackPanel x:Name="GusanoEnemigo3" Orientation="Vertical" Width="80" Height="100" Canvas.Left="240" Canvas.Top="622">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="Assets/corazon.png" Width="20"/>
+                        </StackPanel>
+                        <Image Source="Assets/gusanocamiseta3.png" Margin="20, 10"/>
+                    </StackPanel>
+
+
+                    <ContentControl Canvas.Left="780" Canvas.Top="622" KeyDown="Player_KeyDown" KeyUp="Player_KeyUp">
+                    <StackPanel x:Name="Player" Orientation="Horizontal" Width="Auto" Height="Auto">
+
+                        <Image Source="Assets/flecha.png" Width="30" RenderTransformOrigin="0.5,0.5" PointerPressed="MoveLeft" PointerExited="Image_PointerExited">
+                            <Image.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform ScaleX="-1"/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Image.RenderTransform>
+                        </Image>
+
+                        <StackPanel x:Name="GusanoDelJuagdor" Orientation="Vertical" Width="80" Height="100">
+                            <StackPanel Orientation="Horizontal">
+                                <Image Source="Assets/corazon.png" Width="20"/>
+                                <Image Source="Assets/corazon.png" Width="20"/>
+                                <Image Source="Assets/corazon.png" Width="20"/>
+                                <Image Source="Assets/corazon.png" Width="20"/>
+                            </StackPanel>
+                            <Image Source="Assets/gusano (1).png" Margin="20, 10" RenderTransformOrigin="0.5,0.5">
+                                <Image.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform x:Name="PlayerScale" ScaleX="1"/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Image.RenderTransform>
+                            </Image>
+                        </StackPanel>
+
+                        <Image Source="Assets/flecha.png" Width="30" PointerPressed="MoveRight" PointerExited="Image_PointerExited"/>
+
+                    </StackPanel>
+                    </ContentControl>
+
+                </Canvas>
+
             </Grid>
-            <Grid x:Name="StorePage" KeyDown="Store_KeyDown">
+
+            <Grid x:Name="StorePage" KeyDown="Store_KeyDown" Visibility="Collapsed">
+
                 <Grid.Background>
                     <SolidColorBrush Color="White" Opacity="0.6"/>
                 </Grid.Background>
@@ -102,12 +183,20 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
+                <Image Source="Assets/StoreLogo.png" 
+                   Grid.Row="3"
+                   VerticalAlignment="Bottom"
+                       HorizontalAlignment="Right"
+                   Width="100" 
+                   Margin="0, 0, 20, -30"
+                   Tapped="On_Back"/>
+
                 <Image Source="Assets/Back.png" 
-               Width="80" 
-               HorizontalAlignment="Left" 
-               VerticalAlignment="Top"
-               Margin="20"
-               Tapped="On_Back"/>
+                   Width="80" 
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top"
+                   Margin="20"
+                   Tapped="On_Back"/>
 
                 <StackPanel Orientation="Horizontal" Margin="0,20,20,0" HorizontalAlignment="Right" VerticalAlignment="Top" Height="50">
                     <Image Source="Assets/coin.png" Margin="10"/>
