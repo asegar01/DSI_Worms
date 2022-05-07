@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -30,6 +31,9 @@ namespace DSI_Worms
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+
+            resources.Culture = new CultureInfo("en-US");
+
         }
 
         /// <summary>
