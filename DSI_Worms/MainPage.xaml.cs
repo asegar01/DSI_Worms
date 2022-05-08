@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -24,6 +26,7 @@ namespace DSI_Worms
     {
         public MainPage()
         {
+            resources.Culture = new CultureInfo("en-US");
             this.InitializeComponent();
         }
 

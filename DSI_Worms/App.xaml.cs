@@ -32,8 +32,6 @@ namespace DSI_Worms
             this.InitializeComponent();
             this.Suspending += OnSuspending;
 
-            resources.Culture = new CultureInfo("en-US");
-
         }
 
         /// <summary>

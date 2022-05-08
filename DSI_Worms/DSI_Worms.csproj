@@ -143,11 +143,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="resources.en.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>resources.en.resx</DependentUpon>
-    </Compile>
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
     </Compile>
@@ -263,15 +258,15 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <PRIResource Include="resources.resx">
+    <EmbeddedResource Include="resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>resources.Designer.cs</LastGenOutput>
-    </PRIResource>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="resources.en.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>resources.en.Designer.cs</LastGenOutput>
+    <EmbeddedResource Include="resources.en-US.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>resources.en-US.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
