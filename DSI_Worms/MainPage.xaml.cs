@@ -26,7 +26,6 @@ namespace DSI_Worms
     {
         public MainPage()
         {
-            resources.Culture = new CultureInfo("en-US");
             this.InitializeComponent();
         }
 

@@ -117,10 +117,103 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Configuracion" xml:space="preserve">
-    <value>Configuración</value>
+  <data name="Buttonalta.Content" xml:space="preserve">
+    <value>Alta</value>
   </data>
-  <data name="JUGAR" xml:space="preserve">
-    <value>HH</value>
+  <data name="ButtonArmas.Content" xml:space="preserve">
+    <value>Armas de fuego</value>
+  </data>
+  <data name="ButtonAudio.Content" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="Buttonbaj.Content" xml:space="preserve">
+    <value>Baja</value>
+  </data>
+  <data name="ButtonCamo.Content" xml:space="preserve">
+    <value>Camuflaje</value>
+  </data>
+  <data name="ButtonCqC.Content" xml:space="preserve">
+    <value>Cuerpo a cuerpo</value>
+  </data>
+  <data name="ButtonExplos.Content" xml:space="preserve">
+    <value>Explosivos</value>
+  </data>
+  <data name="Buttonext.Content" xml:space="preserve">
+    <value>Extrema</value>
+  </data>
+  <data name="ButtonGeneral.Content" xml:space="preserve">
+    <value>General</value>
+  </data>
+  <data name="ButtonGorras.Content" xml:space="preserve">
+    <value>Sombreros</value>
+  </data>
+  <data name="Buttonmed.Content" xml:space="preserve">
+    <value>Media</value>
+  </data>
+  <data name="ButtonRopa.Content" xml:space="preserve">
+    <value>Ropa</value>
+  </data>
+  <data name="ButtonVideo.Content" xml:space="preserve">
+    <value>Vídeo</value>
+  </data>
+  <data name="CalidadGen.Text" xml:space="preserve">
+    <value>Calidad general</value>
+  </data>
+  <data name="Config.Text" xml:space="preserve">
+    <value>CONFIGURACIÓN</value>
+  </data>
+  <data name="Ganar.Text" xml:space="preserve">
+    <value>¡HAS GANADO!</value>
+  </data>
+  <data name="JUGAR.Text" xml:space="preserve">
+    <value>JUGAR</value>
+  </data>
+  <data name="Language.Text" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="Menu.Text" xml:space="preserve">
+    <value>VOLVER AL MENÚ</value>
+  </data>
+  <data name="Musica.Text" xml:space="preserve">
+    <value>Música</value>
+  </data>
+  <data name="PantallaCom.Text" xml:space="preserve">
+    <value>Pantalla completa</value>
+  </data>
+  <data name="Particulas.Text" xml:space="preserve">
+    <value>Calidad de partículas</value>
+  </data>
+  <data name="Pausa.Text" xml:space="preserve">
+    <value>MENÚ DE PAUSA</value>
+  </data>
+  <data name="Perder.Text" xml:space="preserve">
+    <value>HAS PERDIDO...</value>
+  </data>
+  <data name="Pers.Text" xml:space="preserve">
+    <value>PERSONALIZACIÓN</value>
+  </data>
+  <data name="Reanudar.Text" xml:space="preserve">
+    <value>REANUDAR</value>
+  </data>
+  <data name="Rtx.Text" xml:space="preserve">
+    <value>RTX</value>
+  </data>
+  <data name="sonido.Text" xml:space="preserve">
+    <value>Efectos de sonido</value>
+  </data>
+  <data name="Subtitulos.Text" xml:space="preserve">
+    <value>Subtítulos</value>
+  </data>
+  <data name="Texturas.Text" xml:space="preserve">
+    <value>Calidad de texturas</value>
+  </data>
+  <data name="Tienda.Text" xml:space="preserve">
+    <value>TIENDA</value>
+  </data>
+  <data name="Tip.Text" xml:space="preserve">
+    <value>Puedes personalizar tus tropas a través del menú 'Personalización' en la pantalla de inicio</value>
+  </data>
+  <data name="VolGen.Text" xml:space="preserve">
+    <value>Volumen general</value>
   </data>
 </root>

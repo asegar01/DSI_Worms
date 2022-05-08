@@ -14,6 +14,8 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Gaming.Input;
 using Windows.System;
+using System.Threading;
+using System.Globalization;
 
 // La plantilla de elemento Página en blanco está documentada en https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -29,6 +31,9 @@ namespace DSI_Worms
         public bool video;
         public bool audio;
 
+        public bool esp;
+        public bool eng;
+
         public Settings()
         {
             this.InitializeComponent();
@@ -42,14 +47,40 @@ namespace DSI_Worms
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            if (Thread.CurrentThread.CurrentCulture.Name == "es-ES")
+            {
+                esp = true;
+                eng = false;
+            }
+            else if (Thread.CurrentThread.CurrentCulture.Name == "en-US")
+            {
+                eng = true;
+                esp = false;
+            }
+
             base.OnNavigatedTo(e);
             General.Focus(FocusState.Keyboard);
+
         }
 
 
         // Navega al menú de inicio
         private void On_Back(object sender, TappedRoutedEventArgs e)
         {
+
+            if (Esp.IsSelected)
+            {
+                ChangeLanguage("es-ES");
+                esp = true;
+                eng = false;
+            }
+            else if (Eng.IsSelected)
+            {
+                ChangeLanguage("en-US");
+                eng = true;
+                esp = false;
+            }
+
             if (Frame.CanGoBack) Frame.GoBack();
         }
 
@@ -135,6 +166,15 @@ namespace DSI_Worms
                         General.IsChecked = true; General_Checked(null, null);
                     }
                     break;
+            }
+        }
+
+        private void ChangeLanguage(string cult)
+        {
+            if (Thread.CurrentThread.CurrentCulture.Name != cult)
+            {
+                Thread.CurrentThread.CurrentCulture = new CultureInfo(cult);
+                Thread.CurrentThread.CurrentUICulture = new CultureInfo(cult);
             }
         }
     }

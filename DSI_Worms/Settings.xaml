@@ -74,8 +74,7 @@
                Tapped="On_Back"/>
 
             <StackPanel Orientation="Vertical">
-                <TextBlock Margin="0, 40, 0, 0"
-                       Text="CONFIGURACIÓN"
+                <TextBlock x:Uid="Config" Margin="0, 40, 0, 0"
                        HorizontalAlignment="Center"
                        FontSize="40"
                        FontWeight="SemiBold"
@@ -93,9 +92,9 @@
                     <StackPanel Orientation="Horizontal"
                             HorizontalAlignment="Center"
                             Margin="0, 70, 0, 0">
-                        <ToggleButton x:Name="General" Content="General" Checked="General_Checked"/>
-                        <ToggleButton x:Name="Video" Content="Vídeo" Checked="Video_Checked"/>
-                        <ToggleButton x:Name="Audio" Content="Audio" Checked="Audio_Checked"/>
+                        <ToggleButton x:Name="General" x:Uid="ButtonGeneral" Checked="General_Checked"/>
+                        <ToggleButton x:Name="Video" x:Uid="ButtonVideo" Checked="Video_Checked"/>
+                        <ToggleButton x:Name="Audio" x:Uid="ButtonAudio" Checked="Audio_Checked"/>
                     </StackPanel>
 
                     <Grid x:Name="Configuration">
@@ -118,9 +117,9 @@
                                     VerticalAlignment="Center"
                                     Width="250">
 
-                                <TextBlock Text="Pantalla completa"/>
-                                <TextBlock Text="Subtítulos"/>
-                                <TextBlock Text="Idioma"/>
+                                <TextBlock x:Uid="PantallaCom"/>
+                                <TextBlock x:Uid="Subtitulos"/>
+                                <TextBlock x:Uid="Language"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" 
@@ -133,10 +132,10 @@
                                 <ToggleSwitch/>
 
                                 <ComboBox SelectedIndex="0">
-                                    <ComboBoxItem>
+                                    <ComboBoxItem x:Name="Esp" IsSelected="{x:Bind esp}">
                                         <Image Source="Assets/SpainFlag.png" Width="35" Height="30"/>
                                     </ComboBoxItem>
-                                    <ComboBoxItem>
+                                    <ComboBoxItem x:Name="Eng" IsSelected="{x:Bind eng}">
                                         <Image Source="Assets/EnglandFlag.png" Width="35" Height="30"/>
                                     </ComboBoxItem>
                                 </ComboBox>
@@ -155,10 +154,10 @@
                                     VerticalAlignment="Center"
                                     Width="250">
 
-                                <TextBlock Text="Calidad general"/>
-                                <TextBlock Text="Calidad de las partículas"/>
-                                <TextBlock Text="Calidad de texturas"/>
-                                <TextBlock Text="RTX"/>
+                                <TextBlock x:Uid="CalidadGen"/>
+                                <TextBlock x:Uid="Particulas"/>
+                                <TextBlock x:Uid="Texturas"/>
+                                <TextBlock x:Uid="Rtx"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" 
@@ -167,24 +166,24 @@
                                     Grid.Column="1">
 
                                 <ComboBox SelectedIndex="1">
-                                    <ComboBoxItem Content="Extrema"/>
-                                    <ComboBoxItem Content="Alta"/>
-                                    <ComboBoxItem Content="Media"/>
-                                    <ComboBoxItem Content="Baja"/>
+                                    <ComboBoxItem x:Uid="Buttonext"/>
+                                    <ComboBoxItem x:Uid="Buttonalta"/>
+                                    <ComboBoxItem x:Uid="Buttonmed"/>
+                                    <ComboBoxItem x:Uid="Buttonbaj"/>
                                 </ComboBox>
 
                                 <ComboBox SelectedIndex="0">
-                                    <ComboBoxItem Content="Extrema"/>
-                                    <ComboBoxItem Content="Alta"/>
-                                    <ComboBoxItem Content="Media"/>
-                                    <ComboBoxItem Content="Baja"/>
+                                    <ComboBoxItem x:Uid="Buttonext"/>
+                                    <ComboBoxItem x:Uid="Buttonalta"/>
+                                    <ComboBoxItem x:Uid="Buttonmed"/>
+                                    <ComboBoxItem x:Uid="Buttonbaj"/>
                                 </ComboBox>
 
                                 <ComboBox SelectedIndex="0">
-                                    <ComboBoxItem Content="Extrema"/>
-                                    <ComboBoxItem Content="Alta"/>
-                                    <ComboBoxItem Content="Media"/>
-                                    <ComboBoxItem Content="Baja"/>
+                                    <ComboBoxItem x:Uid="Buttonext"/>
+                                    <ComboBoxItem x:Uid="Buttonalta"/>
+                                    <ComboBoxItem x:Uid="Buttonmed"/>
+                                    <ComboBoxItem x:Uid="Buttonbaj"/>
                                 </ComboBox>
 
                                 <ToggleSwitch/>
@@ -203,9 +202,9 @@
                                     VerticalAlignment="Center"
                                     Width="250">
 
-                                <TextBlock Text="Volumen general"/>
-                                <TextBlock Text="Música"/>
-                                <TextBlock Text="Efectos de sonido"/>
+                                <TextBlock x:Uid="VolGen"/>
+                                <TextBlock x:Uid="Musica"/>
+                                <TextBlock x:Uid="sonido"/>
                             </StackPanel>
 
                             <StackPanel Orientation="Vertical" 

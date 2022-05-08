@@ -52,7 +52,7 @@
                     Height="40"
                     Click="On_Play">
                     <Button.Content>
-                        <TextBlock xmlns:local="using:DSI_Worms" Text="{x:Bind local:resources.JUGAR}"/>
+                        <TextBlock x:Uid="JUGAR"/>
                     </Button.Content>
                 <Button.Resources>
                         <ResourceDictionary>
@@ -93,7 +93,7 @@
                         </Rectangle>
                     </Border>
 
-                    <TextBlock Text="Puedes personalizar tus tropas a través del menú 'Personalización' en la pantalla de inicio" 
+                    <TextBlock x:Uid="Tip" 
                            HorizontalAlignment="Center" 
                            VerticalAlignment="Center"
                            Foreground="#1565C0"/>

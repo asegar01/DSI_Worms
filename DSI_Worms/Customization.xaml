@@ -80,8 +80,7 @@
 
             <StackPanel Grid.Column="1"
             Orientation="Vertical">
-                <TextBlock Margin="0, 80, 0, 0"
-                       Text="PERSONALIZACIÓN"
+                <TextBlock x:Uid="Pers" Margin="0, 80, 0, 0"
                        HorizontalAlignment="Left"
                        FontSize="40"
                        FontWeight="SemiBold"
@@ -103,9 +102,9 @@
                             HorizontalAlignment="Center"
                                 VerticalAlignment="Top"
                             Margin="0, 20, 0, 0">
-                        <ToggleButton x:Name="Ropa" Content="Ropa" Checked="Ropa_Checked"/>
-                        <ToggleButton x:Name="Sombreros" Content="Sombreros" Checked="Sombreros_Checked"/>
-                        <ToggleButton x:Name="Camuflaje" Content="Camuflaje" Checked="Camuflaje_Checked"/>
+                        <ToggleButton x:Name="Ropa" x:Uid="ButtonRopa" Checked="Ropa_Checked"/>
+                        <ToggleButton x:Name="Sombreros" x:Uid="ButtonGorras" Checked="Sombreros_Checked"/>
+                        <ToggleButton x:Name="Camuflaje" x:Uid="ButtonCamo" Checked="Camuflaje_Checked"/>
                     </StackPanel>
 
                     <Grid x:Name="Tienda">

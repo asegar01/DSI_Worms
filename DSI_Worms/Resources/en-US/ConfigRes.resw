@@ -117,10 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Configuracion" xml:space="preserve">
-    <value>Configuration</value>
+  <data name="alta" xml:space="preserve">
+    <value>High</value>
   </data>
-  <data name="JUGAR" xml:space="preserve">
-    <value>PLAY</value>
+  <data name="baja" xml:space="preserve">
+    <value>Low</value>
+  </data>
+  <data name="CalidadGen" xml:space="preserve">
+    <value>General quality</value>
+  </data>
+  <data name="ext" xml:space="preserve">
+    <value>Extreme</value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="media" xml:space="preserve">
+    <value>Medium</value>
+  </data>
+  <data name="Musica" xml:space="preserve">
+    <value>MUSIC</value>
+  </data>
+  <data name="PantallaCom" xml:space="preserve">
+    <value>Fullscreen</value>
+  </data>
+  <data name="Particulas" xml:space="preserve">
+    <value>Particle quality</value>
+  </data>
+  <data name="Rtx" xml:space="preserve">
+    <value>RTX</value>
+  </data>
+  <data name="sonido" xml:space="preserve">
+    <value>Soundeffects</value>
+  </data>
+  <data name="Subtitulos" xml:space="preserve">
+    <value>Subtitles</value>
+  </data>
+  <data name="Texturas" xml:space="preserve">
+    <value>Texture quality</value>
+  </data>
+  <data name="VolGen" xml:space="preserve">
+    <value>General volume</value>
   </data>
 </root>
